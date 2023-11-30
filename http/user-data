@@ -21,7 +21,7 @@ autoinstall:
     layout: us
   identity:
     hostname: jammy-daily
-    username: vmadmin
+    username: ubuntu
     password: $6$Da/Bin6we2OOJCVD$HM00JdEP47D.cVfSYzwf71khVHPD8NqbYLGw/iXPswndEqI2TNsMELWRCt0tA2.mVMPjFZlPI0B/xOBO9OhF01
   ssh:
     install-server: true
