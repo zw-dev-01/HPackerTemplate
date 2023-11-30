@@ -89,12 +89,12 @@ build {
     post-processor "shell-local" {
       inline = [
 	 "echo Running post-processors",
-         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set var.vmid --scsihw virtio-scsi-pci",
-         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set var.vmid --ide2 ${var.datastore}:cloudinit",
-         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set var.vmid --boot c --bootdisk scsi0",
-         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set var.vmid --ciuser     ${var.ssh_username}",
-         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set var.vmid --cipassword ${var.ssh_password}",
-         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set var.vmid --vga std"
+         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set ${var.vmid} --scsihw virtio-scsi-pci",
+         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set ${var.vmid} --ide2 ${var.datastore}:cloudinit",
+         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set ${var.vmid} --boot c --bootdisk scsi0",
+         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set ${var.vmid} --ciuser     ${var.ssh_username}",
+         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set ${var.vmid} --cipassword ${var.ssh_password}",
+         "ssh -i key.priv root@${var.proxmox_host_ssh} qm set ${var.vmid} --vga std"
          ]
         }
    }
