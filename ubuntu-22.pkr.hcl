@@ -73,8 +73,9 @@ build {
         pause_before= "20s"
         inline = [
           #  "while [ ! -f /var/lib/cloud/instance/boot-finished ]; do echo 'Waiting for cloud-init...'; sleep 1; done",
-            "date > provision.txt",
-            "sudo apt-get update",
+            "echo Running SSH command",
+	    "date > provision.txt",
+	    "sudo apt-get update",
             "sudo apt-get -y upgrade",
             "sudo apt-get -y dist-upgrade",
             "sudo apt-get -y install linux-generic linux-headers-generic linux-image-generic",
@@ -87,6 +88,7 @@ build {
     post-processors {
     post-processor "shell-local" {
       inline = [
+	 "echo Running post-processors",
          "ssh -i key.priv root@${var.proxmox_host_ssh} qm set var.vmid --scsihw virtio-scsi-pci",
          "ssh -i key.priv root@${var.proxmox_host_ssh} qm set var.vmid --ide2 ${var.datastore}:cloudinit",
          "ssh -i key.priv root@${var.proxmox_host_ssh} qm set var.vmid --boot c --bootdisk scsi0",

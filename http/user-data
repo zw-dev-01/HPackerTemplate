@@ -44,8 +44,8 @@ autoinstall:
 #    - sudo systemctl enable qemu-guest-agent
 #    - sudo systemctl start qemu-guest-agent
     - sed -i -e 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /target/etc/ssh/sshd_config
-    - echo 'vmadmin ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/vmadmin
-    - curtin in-target --target=/target -- chmod 440 /etc/sudoers.d/vmadmin
+    - echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/ubuntu
+    - curtin in-target --target=/target -- chmod 440 /etc/sudoers.d/ubuntu
 #    - "lvresize -v -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv"
 #    - "resize2fs -p /dev/mapper/ubuntu--vg-ubuntu--lv"
   runcmd:
