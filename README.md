@@ -5,6 +5,7 @@ Create Ubuntu template with cloud-init components.
 ## Requirements:
 1. Ubuntu 22 iso image on Proxmox datastore.
 2. Hashicorp packer.
+3. Key to access proxmox host (cloud init drive for image)
 
 ## Variables
 ### Definitions:
