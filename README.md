@@ -13,8 +13,8 @@ vars.auto.pkrvars.hcl
 
 Before run the packer, update all variables vars.auto.pkrvars.hcl. 
 The vaiables that can be different in each environment:
-proxmox_host = "http://192.168.1.10:8006" 
-proxmox_host_ssh = "192.168.1.10" 
+proxmox_host = "http://192.168.1.10:8006"
+proxmox_host_ssh = "192.168.1.10"
 proxmox_node_name =  "LAB"
 proxmox_api_user = "root@pam"
 datastore = "local-lvm"
