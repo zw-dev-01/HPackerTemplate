@@ -9,7 +9,7 @@ Create Ubuntu template with cloud-init components.
 ## Variable 
 ### Definitions:
 var-def.pkr.hcl
-## Default Values:
+### Default Values:
 vars.auto.pkrvars.hcl
 
 ## Before run the packer, update all variables vars.auto.pkrvars.hcl. 
