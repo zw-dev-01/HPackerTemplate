@@ -6,7 +6,7 @@ Create Ubuntu template with cloud-init components.
 1. Ubuntu 22 iso image on Proxmox datastore.
 2. Hashicorp packer.
 
-## Variable 
+## Variables
 ### Definitions:
 var-def.pkr.hcl
 ### Default Values:
